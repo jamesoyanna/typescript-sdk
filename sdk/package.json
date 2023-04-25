@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "typescript": "^5.0.4"
   }
 }
