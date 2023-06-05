@@ -1,16 +1,30 @@
 {
-  "name": "sdk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@oyanna/typescript-sdk",
+  "version": "1.0.1",
+  "description": "`npm run build`",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && microbundle --tsconfig tsconfig.json --no-sourcemap",
+    "dev": "microbundle --watch --tsconfig tsconfig.json --no-sourcemap"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "oyanna",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "0.15.0"
+  },
   "dependencies": {
-    "microbundle": "^0.15.1",
+    "isomorphic-unfetch": "^3.1.0",
     "typescript": "^5.0.4"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
